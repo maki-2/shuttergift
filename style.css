@@ -67,6 +67,9 @@ body {
     border-radius:10%;
     margin-bottom: 10px; /* Add space at the bottom */
 }
+#close-popup:hover {
+    transform: scale(1.05);
+}
 
 /* Ensure body is not scrollable when popup is open */
 body.no-scroll {
