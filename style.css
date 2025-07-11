@@ -20,7 +20,8 @@ body {
     height: 100vh; /* Responsive height relative to viewport height */
     max-width: 500px; /* Optional: Limit max width for larger screens */
     max-height: 500px; /* Optional: Limit max height for larger screens */
-    background: rgb(57, 35, 45);;
+    background: #fff;
+    border: 5px solid #000;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,7 +50,7 @@ body {
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 20px;
-    color:#000;
+    color:#fff;
     font-family: "Noto Serif Old Uyghur", serif;
 }
 
