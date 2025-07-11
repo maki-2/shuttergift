@@ -82,7 +82,7 @@ body.no-scroll {
     margin-top: 2%; /* Increased margin-top to move the element lower */
     background: #fff;
     -webkit-background-clip: text;
-    color: transparent;
+    color: #000;
     font-size: 2em;
     font-family: "Noto Serif Old Uyghur", serif;;
 }
