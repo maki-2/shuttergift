@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Page</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+            font-family: Arial, Helvetica, sans-serif;
+            overflow: hidden; /* Prevents scrollbars during confetti animation */
+        }
+
+        #gift {
+            cursor: pointer;
+            width: 200px;
+            height: 200px;
+            background-image: url('pic/gift.png'); /* Replace with your gift image URL */
+            background-size: contain; /* Fit the image to the container */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
+            background-position: center; /* Center the image */
+            transition: transform 1s ease, box-shadow 1s ease;
+            border-radius: 50%; /* Make the container circular if desired */
+        }
+
+        .animated {
+            transform: scale(1.2) rotate(360deg); /* Example animation */
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="gift" onclick="openMainPage()"></div>
+
+    
+    <script>
+        function openMainPage() {
+            // Trigger confetti animation
+           
+
+            // Add animation class to the gift
+            const gift = document.getElementById('gift');
+            gift.classList.add('animated');
+
+            // Redirect to the main page after a delay to allow animation to be visible
+            setTimeout(() => {
+                window.location.href = 'index.html'; // Redirect to main page
+            }, 1000); // Delay to match animation duration
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Optionally add animation class initially
+            const gift = document.getElementById('gift');
+            gift.classList.add('animated');
+        });
+    </script>
+</body>
+</html>
+

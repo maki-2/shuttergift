@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 5%; /* Adjust this value as needed */
+    background: #000;
+}
+
+
+/* Popup Styles */
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width:50vw; /* Responsive width relative to viewport width */
+    height: 100vh; /* Responsive height relative to viewport height */
+    max-width: 500px; /* Optional: Limit max width for larger screens */
+    max-height: 500px; /* Optional: Limit max height for larger screens */
+    background: rgb(57, 35, 45);;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    display: none;
+    border-radius: 10px;
+    overflow: hidden; /* Hide overflow from popup container */
+}
+
+#popup-content {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    text-align: center;
+    overflow-y: auto; /* Allow scrolling inside the content */
+    position: relative;
+    box-sizing: border-box; /* Ensure padding and border are included in width/height */
+    justify-content: space-between; /* Ensures the button is at the bottom */
+}
+
+/* Ensure content and close button are visible and usable */
+#popup-content p {
+    text-align: justify;
+    font-family: Arial;
+    margin-bottom: 20px; /* Add margin to the bottom for spacing */
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    color:#fff;
+    font-family: "Noto Serif Old Uyghur", serif;
+}
+
+#close-popup {
+    font-family: Helvetica;
+    font-size: 16px; /* Adjusted font size for responsiveness */
+    padding: 8px;
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    align-self: center; /* Ensure button remains centered */
+    border-radius:10%;
+    margin-bottom: 10px; /* Add space at the bottom */
+}
+
+/* Ensure body is not scrollable when popup is open */
+body.no-scroll {
+    overflow: hidden;
+}
+
+#ps{
+    padding-top: 4%;
+}
+
+/* Greeting Styles */
+#greet {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 2%; /* Increased margin-top to move the element lower */
+    background: #fff;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 2em;
+    font-family: "Noto Serif Old Uyghur", serif;;
+}
+
+
+#bday-pic {
+    width: 200vw; /* Responsive width relative to viewport width */
+    height: 200vw; /* Responsive height relative to viewport width */
+    max-width: 200px; /* Maximum width to avoid too large images */
+    max-height: 200px; /* Maximum height to avoid too large images */
+    border-radius: 50%; /* Circular shape */
+    object-fit: cover; /* Cover the container without stretching */
+    display: block;
+    margin: 3% auto; /* Center horizontally */
+}
+
+/* Large Divider Styles */
+.large-divider {
+    width: 100%;
+    height: 5px; /* Adjust the height for thickness */
+    background-color: #fff; /* Adjust the color for the divider */
+    margin: 20px 0; /* Adjust the spacing around the divider */
+    border: none; /* Ensures no border styling conflicts */
+}
+
+/* Gallery Styles */
+#main-gallery {
+    column-count: 3;
+    column-gap: 10px; /* Space between columns */
+    padding: 10px; /* Padding around the gallery */
+}
+
+/* Individual Image Styles */
+#main-gallery img {
+    width: 100%; /* Take up full width of column */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space below each image */
+    border-radius: 5px; /* Rounded corners for images */
+    display: block;
+    object-fit: cover; /* Cover the area without stretching */
+    cursor: pointer; /* Make the image look clickable */
+    transition: transform 0.3s ease; /* Smooth transform effect */
+}
+#main-gallery img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+ 
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    body {
+        padding-top: 3%; /* Less padding on smaller screens */
+    }
+
+    #popup-content {
+        padding: 5px; /* Adjust padding for smaller screens */
+    }
+
+    #close-popup {
+        font-size: 14px; /* Smaller font size for close button */
+        padding: 6px; /* Adjust padding for smaller screens */
+    }
+
+    #greet {
+        font-size: 1.5em; /* Smaller font size for smaller screens */
+    }
+
+    #bday-pic {
+        width: 30vw; /* Adjust width for smaller screens */
+        height: 30vw; /* Adjust height for smaller screens */
+        max-width: 200px; /* Adjust maximum width */
+        max-height: 200px; /* Adjust maximum height */
+    }
+}
